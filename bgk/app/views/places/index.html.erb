@@ -1,0 +1,11 @@
+<h1>Alle Plaatsen</h1>
+
+<% @places.each do |place| %>
+  <tr>
+    <td><%= place.place_name %></td>
+    <td><%= place.owner %></td>
+    <td><%= link_to 'Show', place_path(place) %></td>
+    <td><%= link_to 'Edit', edit_place_path(place) %></td>
+  </tr>
+  <br/>
+<% end %>
